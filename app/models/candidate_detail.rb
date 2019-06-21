@@ -1,5 +1,5 @@
 class CandidateDetail < ApplicationRecord
-validates :Name, presence:true
+validates :name, presence:true
   validates :src_reg, presence:true
   validates :gender, presence:true
   validates :age, presence:true

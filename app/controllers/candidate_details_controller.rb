@@ -28,8 +28,7 @@ class CandidateDetailsController < ApplicationController
     @candidate_detail = CandidateDetail.new(candidate_detail_params)
 
     respond_to do |format|
-      if @candidate_detail.valid?
-         @candidate_detail.save
+      if @candidate_detail.save
         format.html { redirect_to @candidate_detail, notice: 'Candidate detail was successfully created.' }
         format.json { render :show, status: :created, location: @candidate_detail }
       else

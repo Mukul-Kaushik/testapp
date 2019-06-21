@@ -1,7 +1,7 @@
 class CreateCandidateDetails < ActiveRecord::Migration[5.2]
   def change
-    create_table :candidate_details do |t|
-      t.integer :s_no
+    create_table :candidate_details, id:false do |t|
+      t.primary_key :s_no,
       t.string :src_reg
       t.string :zone
       t.date :DOR
